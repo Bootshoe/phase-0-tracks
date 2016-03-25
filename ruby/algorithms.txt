@@ -14,3 +14,14 @@ robot elevator use
 		-if number above door is the same as desired floor, get off elevator
 		-if number above door is different than desired floor stay on elevator
 
+
+
+wathing netflix
+
+-find remote to TV
+-press power button on remote for TV, wait
+-once TV is fully functional, press nextflix buttton on remote, wait
+-once netflix fully loaded use arrow buttons to find desired program
+-once highligted on desired program press enter button on remote, wait for program to laod
+-adjust volume using volume buttons on remote
+-watch desired program
