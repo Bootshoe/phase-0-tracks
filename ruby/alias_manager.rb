@@ -1,3 +1,5 @@
+5.6 solos challenge
+
 puts "Do you want to create an alias?"
 answer=gets.chomp
 loop.until condition answer="no"
