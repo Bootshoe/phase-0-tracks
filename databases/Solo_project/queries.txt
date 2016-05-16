@@ -1,0 +1,39 @@
+CREATE TABLE storage (
+id INTEGER PRIMARY KEY,
+product_name VARCHAR(100),
+quantity INT,
+parishable BOOLEAN
+);
+
+CREATE TABLE store_front (
+id INTEGER PRIMARY KEY,
+product_id VARCHAR(100),
+quantity INT,
+parishable BOOLEAN
+FOREIGN KEY (product_id) REFERENCES storage(id)
+);
+
+
+
+INSERT INTO store_front (product_name, quantity, parishable) VALUES ("Reese's", 5, "true")
+
+INSERT INTO storage (product_name, quantity, parishable) VALUES ("Reese's", 30, "true")
+
+INSERT INTO store_front (product_name, quantity, parishable) VALUES ("Paper towels", 3, "false")
+
+INSERT INTO storage (product_name, quantity, parishable) VALUES ("Paper towels", 10, "false")
+
+INSERT INTO store_front (product_name, quantity, parishable) VALUES ("apples", 5, "true")
+
+INSERT INTO storage (product_name, quantity, parishable) VALUES ("apples", 0, "true")
+
+SELECT * FROM store_front
+UPDATE store_front SET quantity=4 WHERE name="Reese's"
+
+SELECT * FROM storage, store_front WHERE store_front.product_id=storage.id;
+
+SELECT store_front.quantity, storage.quantity FROM store_front JOIN storage on store_front.product_id=storage.id
+
+ALTER TABLE storage DROP id=3
+
+
